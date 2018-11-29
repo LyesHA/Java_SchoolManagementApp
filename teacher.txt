@@ -1,0 +1,4 @@
+1000,Zeroug,5147889014,zeroug@hotmail.com,100,200,500
+1020,Fode,5146721234,fode@hotmail.ca,300
+1030,Guenaoui,5146612188,guenaoui@hotmail.ca,400
+1040,Catherine,5147122187,cath@hotmail.ca

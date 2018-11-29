@@ -1,0 +1,6 @@
+100,SQL Database,1000
+200,Java,1000
+300,UML,1020
+400,WINDOWS OS,1030
+500,Project management,4,1000
+600,Building doily,0,1040

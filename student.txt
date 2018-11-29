@@ -1,0 +1,3 @@
+2000,Marc,5147881213,marc@yahoo.ca,100,600
+2001,Maria,5146781415,maria@hotmail.ca,200,300
+2002,catherine,4389124567,catherine@yahoo.ca,400

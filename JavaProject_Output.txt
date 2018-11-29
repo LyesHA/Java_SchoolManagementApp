@@ -1,0 +1,49 @@
+5-1)- Les resultat d'un enseignant donné
+Id : 1000 Name : Zeroug Phone : 5147889014 Email : zeroug@hotmail.com Nb Evaluations : 3
+------- List of taught courses -------
+Course : id : 100 Title : Sql database
+Course : id : 200 Title : Java
+Course : id : 500 Title : Project management
+Total number of taught courses : 3
+-----------------------
+Avg evaluation is : 7,33
+------------------List of domains------------------
+Domain : Computer Science
+Domain : Management
+
+5-2)- Les resultat d'un etudiant donné
+Id : 2001 Name : Maria Phone : 5146781415 Email : maria@hotmail.ca Nb Evaluations : 2
+------- List of taken courses -------
+Course : id : 200 Title : Java
+Course : id : 300 Title : Uml
+Total number of taken courses : 2
+-----------------------
+Avg evaluation is : 6,5
+------------------List of domains------------------
+Domain : Computer Science
+
+
+5-3)-
+A) - Enseignant a ajouté un cours
+Id : 1020 Name : Fode Phone : 5146721234 Email : fode@hotmail.ca Nb Evaluations : 3
+------- List of taught courses -------
+Course : id : 300 Title : Uml
+Course : id : 400 Title : Windows os
+Total number of taught courses : 2
+-----------------------
+Avg evaluation is : 6,33
+------------------List of domains------------------
+Domain : Computer Science
+
+B) - Etudiant a ajouté un cours
+Id : 2000 Name : Marc Phone : 5147881213 Email : marc@yahoo.ca Nb Evaluations : 2
+------- List of taken courses -------
+Course : id : 100 Title : Sql database
+Course : id : 600 Title : Building doily
+Course : id : 300 Title : Uml
+Total number of taken courses : 3
+-----------------------
+Avg evaluation is : 4,0
+------------------List of domains------------------
+Domain : Computer Science
+Domain : Fashion

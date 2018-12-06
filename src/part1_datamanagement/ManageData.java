@@ -2,10 +2,13 @@ package part1_datamanagement;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import database.creation.DataBaseCreation;
+import database.creation.DatabaseSetup;
 import part1_model.Course;
 import part1_model.Person;
 import part1_model.Student;
@@ -43,6 +46,7 @@ public class ManageData {
 		return listOfCourses;
 	}
 
+	
 	public static void displayCourses(ArrayList<Course> listOfCourses){
 		for(Course oneCourse:listOfCourses) {
 			System.out.println(oneCourse);
@@ -133,7 +137,19 @@ public class ManageData {
 			System.out.println(oneStudent+"\n");
 		}
 	}
-
+	public static Connection getConnection() {
+		Connection conn = null;
+		try {
+			conn= DatabaseSetup.getConnection("dbConfig.properties");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return conn;
+	}
+	
 	public static void teacherEvaluateStudent(ArrayList<Person> listOfTeachers,ArrayList<Person> listOfStudents) {
 		
 		File fileId = new File("teacherEvaluateStudent.txt");
@@ -152,6 +168,9 @@ public class ManageData {
 							if(oneStudent.getId()==studentId) {
 								try {
 									oneTeacher.evaluate(oneStudent, grade);
+									String sqlCommand = "INSERT INTO TEACHEREVALUATESTUDENT VALUES (?,?,?)";
+									/*DataBaseCreation.ddl_with_parameters(getConnection(), sqlCommand, oneTeacher.getId(),
+											oneStudent.getId(),grade);*/
 								} catch (Exception e) {
 									e.getMessage();
 								}
@@ -190,6 +209,9 @@ public class ManageData {
 								if(oneTeacher.getId()==teacherId) {
 									try {
 										oneStudent.evaluate(oneTeacher, grade);
+										String sqlCommand = "INSERT INTO STUDENTEVALUATETEACHER VALUES(?,?,?)";
+										/*DataBaseCreation.ddl_with_parameters(getConnection(), sqlCommand, oneStudent.getId(),
+												oneTeacher.getId(), grade);*/
 									} catch (Exception e) {
 										e.getMessage();
 									}
